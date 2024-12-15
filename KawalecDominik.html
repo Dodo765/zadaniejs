@@ -164,7 +164,41 @@
                         <div id="zad7_wynik" class="mt-3"></div>
                     </section>
 
+                    <!-- Zadanie 8 -->
+                    <section id="zadanie8" class="task">
+                        <h3>Zadanie 8</h3>
+                        <p>
+                            Konwersja liczb z systemu o podstawie p na system dziesiętny i odwrotnie.
+                        </p>
+                        <input type="number" id="zad8_a" placeholder="Wpisz liczbę" class="form-control mb-1" min="0">
+                        <input type="number" id="zad8_s" placeholder="Wpisz system" class="form-control mb-1" min="2">
+                        <select name="zad8_d" id="zad8_d" class="form-control mb-1" >
+                            <option value="10">Zamień liczbę z systemu 10 do systemu p</option>
+                            <option value="p">Zamień liczbę z systemu p do systemu 10</option>
+                        </select>
+                        <button class="btn btn-primary mt-2" onclick="f8_DK()">Zad8_DK</button>
+                        <button id="toggleKod8" class="btn btn-secondary mt-2" onclick="pokazKod(8)">Pokaż kod</button>
+                        <pre id="kod8" style="display:none;"></pre>
+                        <div id="zad8_wynik" class="mt-3"></div>
+                    </section>
 
+                    <!-- Zadanie 9 -->
+                    <section id="zadanie9" class="task">
+                        <h3>Zadanie 9</h3>
+                        <p>
+                            Losowanie z powtórzeniami i bez powtórzeń n (n>0) liczb całkowitych z przedziału [a,b] 
+                        </p>
+                        <input type="number" id="zad9_a" placeholder="Wpisz liczbę a" class="form-control mb-1">
+                        <input type="number" id="zad9_b" placeholder="Wpisz liczbę b" class="form-control mb-1">
+                        <input type="number" id="zad9_n" placeholder="Wpisz ilość liczb do wylosowania" class="form-control mb-1">
+                        <input type="checkbox" name="zad9_p" id="zad9_p">
+                        Powtórzenia
+                        <br>
+                        <button class="btn btn-primary mt-2" onclick="f9_DK()">Zad9_DK</button>
+                        <button id="toggleKod9" class="btn btn-secondary mt-2" onclick="pokazKod(9)">Pokaż kod</button>
+                        <pre id="kod9" style="display:none;"></pre>
+                        <div id="zad9_wynik" class="mt-3"></div>
+                    </section>
                 </div>
             </main>
         </div>

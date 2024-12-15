@@ -194,7 +194,7 @@ function f7_DK() {
     const a = parseFloat(document.getElementById("zad7_a").value);
     const b = parseFloat(document.getElementById("zad7_b").value);
     // const d = document.getElementById("zad7_dzialanie").value;
-    const wynik = document.getElementById("zad7_wynik");
+    let wynik = document.getElementById("zad7_wynik");
 
     wynik.innerHTML = "";
 
@@ -217,15 +217,75 @@ function f7_DK() {
     wynik.innerHTML += `Potęgowanie: ${resultPow}<br>`;
 }
 
-// Aktywowanie/dezaktywowanie inputu dla liczby miejsc po przecinku w zależności od wybranego formatu
-document.getElementById("zad7_format").addEventListener("change", function() {
-    const decimalInput = document.getElementById("zad7_decimal_places");
-    if (this.value === "fixed") {
-        decimalInput.disabled = false;
-    } else {
-        decimalInput.disabled = true;
+
+// Zadanie 8
+// Konwersja liczb z systemu o podstawie p na system dziesiętny i odwrotnie
+function f8_DK() {
+    let a = parseFloat(document.getElementById("zad8_a").value);
+    const s = parseFloat(document.getElementById("zad8_s").value);
+    const d = document.getElementById("zad8_d").value;
+    let wynik = document.getElementById("zad8_wynik");
+
+    wynik.innerHTML = "";
+
+    if (isNaN(a) || isNaN(s)) {
+        wynik.innerHTML += "Proszę wprowadzić poprawne liczby.";
+        return;
     }
-});
+
+    if(d=='p')
+        wynik.innerHTML += parseInt(a,s);
+    else{
+        if (a === 0) return '0';
+    
+        const digits = "0123456789ABCDEFGHIJK";  // Obsługuje do podstawy 16
+        let result = '';
+        
+        while (a > 0) {
+            result = digits[a % s] + result;
+            a = Math.floor(a / s);
+        }
+        wynik.innerHTML += result
+    }
+
+    
+}
+
+
+// Zadanie 9
+// Losowanie z powtórzeniami i bez powtórzeń n (n>0) liczb całkowitych z przedziału [a,b]
+function f9_DK() {
+    let a = parseFloat(document.getElementById("zad9_a").value);
+    const b = parseFloat(document.getElementById("zad9_b").value);
+    const n = parseFloat(document.getElementById("zad9_n").value);
+    const p = document.getElementById("zad9_p").value;
+    let wynik = document.getElementById("zad8_wynik");
+
+    wynik.innerHTML = "";
+
+    if (isNaN(a) || isNaN(b)) {
+        wynik.innerHTML += "Proszę wprowadzić poprawne liczby.";
+        return;
+    }
+
+    if(a > b){
+        let temp=a;
+        a=b;
+        b=temp;
+    }
+
+    let array =[];
+    let liczba;
+
+    for(let i=1;i<=n;i++){
+        liczba = Math.random()*(b-a)+a;
+        if(p){
+            if(!array.find(liczba))
+                array.push(liczba);
+        } else 
+            array.push(liczba);
+    }
+}
 
 
 // Pokaż kod
