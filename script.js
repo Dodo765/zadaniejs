@@ -1,7 +1,9 @@
+// Pracę przygotował Dominik Kawalec 4i
+
 // Zadanie 1
 // Sprawdzanie czy wartość x wprowadzona do pola tekstowego jest liczbą. Jeżeli tak, to czy jest to liczba dodatnia, zero czy liczba ujemna
 function f1_DK() {
-    let x = document.getElementById("zad1_x").value;
+    let x = parseInt(document.getElementById("zad1_x").value);
     let wynik = document.getElementById("zad1_wynik");
 
     if (isNaN(x)) {
@@ -18,8 +20,8 @@ function f1_DK() {
 // Zadanie 2
 // Wyświetlanie kolejnych liczb całkowitych z przedziału [a,b]. Wykonaj zadanie za pomocą pętli for, while, do..while.
 function f2_for_DK() {
-    let a = document.getElementById("zad2_for_a").value;
-    let b = document.getElementById("zad2_for_b").value;
+    let a = parseInt(document.getElementById("zad2_for_a").value);
+    let b = parseInt(document.getElementById("zad2_for_b").value);
     let wynik = document.getElementById("zad2_for_wynik");
 
     wynik.innerHTML = "";
@@ -42,8 +44,8 @@ function f2_for_DK() {
 }
 
 function f2_while_DK() {
-    let a = document.getElementById("zad2_while_a").value;
-    let b = document.getElementById("zad2_while_b").value;
+    let a = parseInt(document.getElementById("zad2_while_a").value);
+    let b = parseInt(document.getElementById("zad2_while_b").value);
     let wynik = document.getElementById("zad2_while_wynik");
 
     wynik.innerHTML = "";
@@ -68,8 +70,8 @@ function f2_while_DK() {
 }
 
 function f2_dowhile_DK() {
-    let a = document.getElementById("zad2_dowhile_a").value;
-    let b = document.getElementById("zad2_dowhile_b").value;
+    let a = parseInt(document.getElementById("zad2_dowhile_a").value);
+    let b = parseInt(document.getElementById("zad2_dowhile_b").value);
     let wynik = document.getElementById("zad2_dowhile_wynik");
 
     wynik.innerHTML = "";
@@ -96,9 +98,9 @@ function f2_dowhile_DK() {
 // Zadanie 3
 // Wyświetlanie wszystkich liczb z przedziału [a,b], które są podzielne przez n
 function f3_DK() {
-    let a = document.getElementById("zad3_a").value;
-    let b = document.getElementById("zad3_b").value;
-    let n = document.getElementById("zad3_n").value;
+    let a = parseInt(document.getElementById("zad3_a").value);
+    let b = parseInt(document.getElementById("zad3_b").value);
+    let n = parseInt(document.getElementById("zad3_n").value);
     let wynik = document.getElementById("zad3_wynik");
 
     wynik.innerHTML = "";
@@ -124,7 +126,7 @@ function f3_DK() {
 // Zadanie 4
 // Wyświetlanie ilości i sumy cyfr liczby całkowitej n wprowadzonej do pola tekstowego
 function f4_DK() {
-    let n = document.getElementById("zad4_n").value;
+    let n = parseInt(document.getElementById("zad4_n").value);
     let wynik = document.getElementById("zad4_wynik");
 
     wynik.innerHTML = "";
@@ -147,7 +149,7 @@ function f4_DK() {
 // Zadanie 5
 // Obliczanie silni liczby całkowitej n
 function f5_DK() {
-    let n = document.getElementById("zad5_n").value;
+    let n = parseInt(document.getElementById("zad5_n").value);
     let wynik = document.getElementById("zad5_wynik");
 
     wynik.innerHTML = "";
@@ -169,8 +171,8 @@ function f5_DK() {
 // Zadanie 6
 // Wyświetlanie n-kolejnych potęg naturalnych liczby całkowitej p
 function f6_DK() {
-    let p = document.getElementById("zad6_p").value;
-    let n = document.getElementById("zad6_n").value;
+    let p = parseInt(document.getElementById("zad6_p").value);
+    let n = parseInt(document.getElementById("zad6_n").value);
     let wynik = document.getElementById("zad6_wynik");
 
     wynik.innerHTML = "";
@@ -191,8 +193,8 @@ function f6_DK() {
 // Zadanie 7
 // Dodawanie, odejmowanie, mnożenie, dzielenie, potęgowanie liczb rzeczywistych
 function f7_DK() {
-    let a = parseFloat(document.getElementById("zad7_a").value);
-    let b = parseFloat(document.getElementById("zad7_b").value);
+    let a = parseInt(document.getElementById("zad7_a").value);
+    let b = parseInt(document.getElementById("zad7_b").value);
     // let d = document.getElementById("zad7_dzialanie").value;
     let wynik = document.getElementById("zad7_wynik");
 
@@ -221,9 +223,9 @@ function f7_DK() {
 // Zadanie 8
 // Konwersja liczb z systemu o podstawie p na system dziesiętny i odwrotnie
 function f8_DK() {
-    let a = parseFloat(document.getElementById("zad8_a").value);
-    let s = parseFloat(document.getElementById("zad8_s").value);
-    let d = document.getElementById("zad8_d").value;
+    let a = parseInt(document.getElementById("zad8_a").value);
+    let s = parseInt(document.getElementById("zad8_s").value);
+    let dzialanie = document.getElementById("zad8_d").value;
     let wynik = document.getElementById("zad8_wynik");
 
     wynik.innerHTML = "";
@@ -233,7 +235,7 @@ function f8_DK() {
         return;
     }
 
-    if(d=='p')
+    if(dzialanie == 'p')
         wynik.innerHTML += parseInt(a,s);
     else{
         if (a === 0) return '0';
@@ -243,7 +245,7 @@ function f8_DK() {
         
         while (a > 0) {
             result = digits[a % s] + result;
-            a = Math.floor(a / s);
+            a = Math.round(a / s);
         }
         wynik.innerHTML += result
     }
@@ -255,9 +257,9 @@ function f8_DK() {
 // Zadanie 9
 // Losowanie z powtórzeniami i bez powtórzeń n (n>0) liczb całkowitych z przedziału [a,b]
 function f9_DK() {
-    let a = parseFloat(document.getElementById("zad9_a").value);
-    let b = parseFloat(document.getElementById("zad9_b").value);
-    let n = parseFloat(document.getElementById("zad9_n").value);
+    let a = parseInt(document.getElementById("zad9_a").value);
+    let b = parseInt(document.getElementById("zad9_b").value);
+    let n = parseInt(document.getElementById("zad9_n").value);
     let powtorzenia = document.getElementById("zad9_p").value;
     powtorzenia = powtorzenia == "true" ? true : false;
 
@@ -280,7 +282,7 @@ function f9_DK() {
         wynik.innerHTML += "<span style='color:red'>Nie można wylosować tylu unikalnych liczb z danego przedziału.</span><br>"
 
     for(let i=1;i<=n;i++){
-        let liczba = Math.floor(Math.random()*(b-a)+a);
+        let liczba = Math.round(Math.random()*(b-a)+a);
         if(!powtorzenia){
             if(!liczby.find((element) => element == liczba))
                 liczby.push(liczba);
@@ -300,10 +302,12 @@ function f9_DK() {
 // Zadanie 10
 // Obliczanie wartości średniej i maksymalnej z wylosowanego zbioru z przedziału [a, b]
 function f10_DK() {
-    let n = document.getElementById("zad10_n").value;
-    let a = document.getElementById("zad10_a").value;
-    let b = document.getElementById("zad10_b").value;
+    let n = parseInt(document.getElementById("zad10_n").value);
+    let a = parseInt(document.getElementById("zad10_a").value);
+    let b = parseInt(document.getElementById("zad10_b").value);
     let wynik = document.getElementById("zad10_wynik");
+
+    console.log(typeof n)
 
     wynik.innerHTML = "";
 
@@ -320,9 +324,10 @@ function f10_DK() {
 
     let liczby = [];
     for (let i = 0; i < n; i++) {
-        let liczba = Math.floor(Math.random() * (b-a)) + a;
+        let liczba = Math.round(Math.random() * (b-a)) + a;
         liczby.push(liczba);
     }
+    console.log(liczby)
 
     let max = Math.max(...liczby);
     let suma = 0;
@@ -339,10 +344,10 @@ function f10_DK() {
 // Zadanie 11
 // Wyświetlanie ilości liczb z wylosowanego zbioru, których wartość jest równa liczbie x
 function f11_DK() {
-    let n = document.getElementById("zad11_n").value;
-    let a = document.getElementById("zad11_a").value;
-    let b = document.getElementById("zad11_b").value;
-    let x = document.getElementById("zad11_x").value;
+    let n = parseInt(document.getElementById("zad11_n").value);
+    let a = parseInt(document.getElementById("zad11_a").value);
+    let b = parseInt(document.getElementById("zad11_b").value);
+    let x = parseInt(document.getElementById("zad11_x").value);
     let wynik = document.getElementById("zad11_wynik");
 
     wynik.innerHTML = "";
@@ -360,7 +365,7 @@ function f11_DK() {
 
     let liczby = [];
     for (let i = 0; i < n; i++) {
-        let liczba = Math.floor(Math.random() * (b-a)) + a;
+        let liczba = Math.round(Math.random() * (b-a)) + a;
         liczby.push(liczba);
     }
 
@@ -377,9 +382,9 @@ function f11_DK() {
 // Zadanie 12
 // Porządkowanie rosnąco i malejąco wylosowanych liczb z przedziału [a,b]
 function f12_DK() {
-    let n = document.getElementById("zad12_n").value;
-    let a = document.getElementById("zad12_a").value;
-    let b = document.getElementById("zad12_b").value;
+    let n = parseInt(document.getElementById("zad12_n").value);
+    let a = parseInt(document.getElementById("zad12_a").value);
+    let b = parseInt(document.getElementById("zad12_b").value);
     let wynik = document.getElementById("zad12_wynik");
 
     wynik.innerHTML = "";
@@ -397,7 +402,7 @@ function f12_DK() {
 
     let liczby = [];
     for (let i = 0; i < n; i++) {
-        let liczba = Math.floor(Math.random() * (b-a)) + a;
+        let liczba = Math.round(Math.random() * (b-a)) + a;
         liczby.push(liczba);
     }
 
@@ -418,8 +423,8 @@ function f12_DK() {
 // Po wczytaniu dwóch liczb całkowitych – a, b, skrypt pyta o ich iloczyn do momentu, aż zostanie podany prawidłowy wynik.
 // Następnie wyświetlany jest prawidłowy wynik oraz ilość prób podawania wyniku.
 function f13_DK() {
-    const a = document.getElementById("zad13_a").value;
-    const b = document.getElementById("zad13_b").value;
+    const a = parseInt(document.getElementById("zad13_a").value);
+    const b = parseInt(document.getElementById("zad13_b").value);
     const wynikDiv = document.getElementById("zad13_wynik");
 
     wynikDiv.innerHTML = "";
@@ -434,7 +439,7 @@ function f13_DK() {
     let podanyWynik;
 
     do {
-        podanyWynik = parseInt(prompt(`Podaj iloczyn liczb ${a} i ${b}:`));
+        podanyWynik = parseInt(prompt(`Podaj wynik iloczynu ${a} * ${b}:`));
         liczbaProb++;
         if (isNaN(podanyWynik)) {
             alert("To nie jest liczba! Spróbuj ponownie.");
@@ -454,7 +459,7 @@ function f14_DK() {
     const wynikDiv = document.getElementById("zad14_wynik");
     wynikDiv.innerHTML = "";
     
-    const wylosowanaLiczba = Math.floor(Math.random() * 99) + 1;
+    const wylosowanaLiczba = Math.round(Math.random() * 99) + 1;
     let liczbaProb = 0;
     let podanaLiczba;
 
@@ -477,8 +482,8 @@ function f14_DK() {
 // Zadanie 15
 // Wyświetlanie liczb w kolejnych wierszach w zależności od wartości k i n
 function f15_DK() {
-    const k = document.getElementById("zad15_k").value;
-    const n = document.getElementById("zad15_n").value;
+    const k = parseInt(document.getElementById("zad15_k").value);
+    const n = parseInt(document.getElementById("zad15_n").value);
     const wynikDiv = document.getElementById("zad15_wynik");
 
     wynikDiv.innerHTML = "";

@@ -1,0 +1,77 @@
+<html>
+	<body>
+		<h2>JS obiekty Math, Number, Global</h2>
+		<p id="p1">wyniki_XY</p>
+		x=<input id="in1" value="100" /> podaj wartość_XY
+		<button id="b1">oblicz_XY</button>
+
+		<script>
+			function f1() {
+				var x = document.getElementById("in1").value; // pobranie wartości z pola tekstowego
+				document.getElementById("p1").innerHTML = " Wartość x=" + x;
+				document.getElementById("p1").innerHTML += "<br> x * Math.PI=" + x * Math.PI; // wartość x pomnożona przez pi
+				document.getElementById("p1").innerHTML += "<br> Math.cos(Math.PI) = " + Math.cos(Math.PI); // cosinus z pi
+				document.getElementById("p1").innerHTML += "<br> Math.round(x) = " + Math.round(x); // zaokrąglenie x
+				document.getElementById("p1").innerHTML += "<br> ilość miejs znaczących: (x * Math.PI.toPrecision(3)) = " + (x * Math.PI).toPrecision(3); // obiekt Number - metoda toPrecision() - formatuje liczbę - ilość cyfr znaczących
+				document.getElementById("p1").innerHTML += "<br> ilość miejsc po przecinku: (x * Math.PI).toFixed(3)= " + (x * Math.PI).toFixed(3); // metoda toFixed() - formatuje liczbę - ilość cyfr po przecinku
+				document.getElementById("p1").innerHTML += "<br> (n)=>(10): parseFloat(x, 8) = " + parseFloat(x, 8); //konwersja na liczbę całkowitą z systemu (n)
+				x = Number(document.getElementById("in1").value); // konwersja na liczbę
+				document.getElementById("p1").innerHTML += "<br> (10)=>(n): " + x + ".toString(2) = " + x.toString(2); // konwersja na łańcuch znaków z systemu (10)
+				var y = parseFloat(x, 10); // obiekt Global - metoda parseFloat()
+				var z = Math.random(); //zwraca liczbę pseudolosową z zakresu <0;1>
+				document.getElementById("p1").innerHTML += "<br> losowanie: Math.random() = " + z;
+				document.getElementById("p1").innerHTML += "<br> losowanie: (Math.floor(x * Math.random()) - 5).toString()= " + 
+				(Math.floor(x * z) - 5).toString(); //losowanie liczby z zakresu <-5:x-5>
+
+				/////////////////
+
+				// Ćwiczenie 1
+
+				/////////////////
+				document.getElementById("p1").innerHTML += "<br>Zwraca 0, gdy x nie jest liczbą, 1 gdy nią jest [Number(isNaN(x))]: " + Number(isNaN(x));
+				//sign
+				document.getElementById("p1").innerHTML += "<br>Zwraca wartość znaku (x==0 => 0, x>0 => 1, x<0 => -1) [Math.sign(x)]: " + Math.sign(x);
+				//sqrt
+				document.getElementById("p1").innerHTML += "<br>Zwraca pierwiastek z liczby [Math.sqrt(x)]: " + Math.sqrt(x);
+				//trunc
+				document.getElementById("p1").innerHTML += "<br>Usuwa liczby po przecinku [Math.trunc(x)]: " + Math.trunc(x);
+				//isIntiger
+				document.getElementById("p1").innerHTML += "<br>Sprawdza czy liczba jest liczbą całkowitą [Number.isInteger(x)]: " + Number.isInteger(x);
+				//INFINITY
+				document.getElementById("p1").innerHTML += "<br>Wyświetlenie dodatniej nieskończoności [Number.POSITIVE_INFINITY]: " + Number.POSITIVE_INFINITY;
+				document.getElementById("p1").innerHTML += "<br>Wyświetlenie ujemnej nieskończoności [Number.NEGATIVE_INFINITY]: " + Number.NEGATIVE_INFINITY+"<br>";
+
+			}
+			// obiekty Math, Number - pozwalają na realizację operacji matematycznych
+			function f2() {
+				var x = document.getElementById("in1").value;
+				if (x != "" && isNaN(x) == false) {
+					return x * x;
+				} else return `${x} to nie jest liczba`;
+			}
+			function f2a() {
+				var x = document.getElementById("in1").value;
+				document.getElementById("p1").innerHTML += `<br><br> Z funkcji f2a(): ${x} * ${x} = ${f2()}`;
+			}
+			function f3(x) {
+				if (x == "") {
+					return "To jest pusty łańcuch. Wpisz liczbę";
+				} else if (isNaN(x) == true) {
+					return "To nie jest liczba. Podaj liczbę";
+				} else {
+					return 1 / x;
+				}
+			}
+			function f4_DK(){
+				let x = parseFloat(document.querySelector("#in1").value);
+				if(x !== 0 )
+					document.getElementById("p1").innerHTML += "<br>Wynik funkcji f3: "+ f3(x);
+				else
+					document.getElementById("p1").innerHTML += "X nie może być 0! Nie można dzielić przez 0!";
+			}
+			b1.addEventListener("click", f1);
+			b1.addEventListener("click", f2a);
+			b1.addEventListener("click", f4_DK);
+		</script>
+	</body>
+</html>
