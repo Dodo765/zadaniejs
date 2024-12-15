@@ -186,18 +186,109 @@
                     <section id="zadanie9" class="task">
                         <h3>Zadanie 9</h3>
                         <p>
-                            Losowanie z powtórzeniami i bez powtórzeń n (n>0) liczb całkowitych z przedziału [a,b] 
+                            Losowanie z powtórzeniami i bez powtórzeń n (n > 0) liczb całkowitych z przedziału [a, b].
                         </p>
-                        <input type="number" id="zad9_a" placeholder="Wpisz liczbę a" class="form-control mb-1">
-                        <input type="number" id="zad9_b" placeholder="Wpisz liczbę b" class="form-control mb-1">
-                        <input type="number" id="zad9_n" placeholder="Wpisz ilość liczb do wylosowania" class="form-control mb-1">
-                        <input type="checkbox" name="zad9_p" id="zad9_p">
-                        Powtórzenia
-                        <br>
-                        <button class="btn btn-primary mt-2" onclick="f9_DK()">Zad9_DK</button>
+                        <input type="number" id="zad9_n" placeholder="Ilość liczb (n)" class="form-control mb-1">
+                        <input type="number" id="zad9_a" placeholder="Początek przedziału (a)" class="form-control mb-1">
+                        <input type="number" id="zad9_b" placeholder="Koniec przedziału (b)" class="form-control mb-1">
+                        <select id="zad9_p" class="form-control mb-1">
+                            <option value="true">Z powtórzeniami</option>
+                            <option value="false">Bez powtórzeń</option>
+                        </select>
+                        <button class="btn btn-primary mt-2" onclick="f9_DK()">Losuj</button>
                         <button id="toggleKod9" class="btn btn-secondary mt-2" onclick="pokazKod(9)">Pokaż kod</button>
                         <pre id="kod9" style="display:none;"></pre>
                         <div id="zad9_wynik" class="mt-3"></div>
+                    </section>
+
+                    <!-- Zadanie 10 -->
+                    <section id="zadanie10" class="task">
+                        <h3>Zadanie 10</h3>
+                        <p>
+                            Obliczanie wartości średniej i maksymalnej z wylosowanego zbioru z przedziału [a, b].
+                        </p>
+                        <input type="number" id="zad10_n" placeholder="Ilość liczb (n)" class="form-control mb-1">
+                        <input type="number" id="zad10_a" placeholder="Początek przedziału (a)" class="form-control mb-1">
+                        <input type="number" id="zad10_b" placeholder="Koniec przedziału (b)" class="form-control mb-1">
+                        <button class="btn btn-primary mt-2" onclick="f10_DK()">Oblicz</button>
+                        <button id="toggleKod10" class="btn btn-secondary mt-2" onclick="pokazKod(10)">Pokaż kod</button>
+                        <pre id="kod10" style="display:none;"></pre>
+                        <div id="zad10_wynik" class="mt-3"></div>
+                    </section>
+
+                    <!-- Zadanie 11 -->
+                    <section id="zadanie11" class="task">
+                        <h3>Zadanie 11</h3>
+                        <p>
+                            Wyświetlanie ilości liczb z wylosowanego zbioru, których wartość jest równa liczbie x.
+                        </p>
+                        <input type="number" id="zad11_n" placeholder="Ilość liczb (n)" class="form-control mb-1">
+                        <input type="number" id="zad11_a" placeholder="Początek przedziału (a)" class="form-control mb-1">
+                        <input type="number" id="zad11_b" placeholder="Koniec przedziału (b)" class="form-control mb-1">
+                        <input type="number" id="zad11_x" placeholder="Liczba x" class="form-control mb-1">
+                        <button class="btn btn-primary mt-2" onclick="f11_DK()">Oblicz</button>
+                        <button id="toggleKod11" class="btn btn-secondary mt-2" onclick="pokazKod(11)">Pokaż kod</button>
+                        <pre id="kod11" style="display:none;"></pre>
+                        <div id="zad11_wynik" class="mt-3"></div>
+                    </section>
+
+                    <!-- Zadanie 12 -->
+                    <section id="zadanie12" class="task">
+                        <h3>Zadanie 12</h3>
+                        <p>
+                            Porządkowanie rosnąco i malejąco wylosowanych liczb z przedziału [a,b].
+                        </p>
+                        <input type="number" id="zad12_n" placeholder="Ilość liczb (n)" class="form-control mb-1">
+                        <input type="number" id="zad12_a" placeholder="Początek przedziału (a)" class="form-control mb-1">
+                        <input type="number" id="zad12_b" placeholder="Koniec przedziału (b)" class="form-control mb-1">
+                        <button class="btn btn-primary mt-2" onclick="f12_DK()">Oblicz</button>
+                        <button id="toggleKod12" class="btn btn-secondary mt-2" onclick="pokazKod(12)">Pokaż kod</button>
+                        <pre id="kod12" style="display:none;"></pre>
+                        <div id="zad12_wynik" class="mt-3"></div>
+                    </section>
+
+                    <!-- Zadanie 13 -->
+                    <section id="zadanie13" class="task">
+                        <h3>Zadanie 13</h3>
+                        <p>
+                            Po wczytaniu dwóch liczb całkowitych – a, b, skrypt pyta o ich iloczyn do momentu, aż zostanie podany prawidłowy wynik.
+                            Następnie wyświetlany jest prawidłowy wynik oraz ilość prób podawania wyniku.
+                        </p>
+                        <input type="number" id="zad13_a" placeholder="Liczba a" class="form-control mb-1">
+                        <input type="number" id="zad13_b" placeholder="Liczba b" class="form-control mb-1">
+                        <button class="btn btn-primary mt-2" onclick="f13_DK()">Rozpocznij</button>
+                        <button id="toggleKod13" class="btn btn-secondary mt-2" onclick="pokazKod(13)">Pokaż kod</button>
+                        <pre id="kod13" style="display:none;"></pre>
+                        <div id="zad13_wynik" class="mt-3"></div>
+                    </section>
+
+                    <!-- Zadanie 14 -->
+                    <section id="zadanie14" class="task">
+                        <h3>Zadanie 14</h3>
+                        <p>
+                            Program prosi użytkownika o podanie liczby z przedziału od 1 do 100 do momentu aż liczba będzie równa wartości wylosowanej
+                            z zakresu od 1 do 100. Jeżeli użytkownik poda wartość różną od wylosowanej program powinien informować, czy jest to wartość większa,
+                            czy mniejsza od wartości wylosowanej. Po zakończeniu powinna być wyświetlona ilość wykonanych prób.
+                        </p>
+                        <button class="btn btn-primary mt-2" onclick="f14_DK()">Rozpocznij</button>
+                        <button id="toggleKod14" class="btn btn-secondary mt-2" onclick="pokazKod(14)">Pokaż kod</button>
+                        <pre id="kod14" style="display:none;"></pre>
+                        <div id="zad14_wynik" class="mt-3"></div>
+                    </section>
+
+                    <!-- Zadanie 15 -->
+                    <section id="zadanie15" class="task">
+                        <h3>Zadanie 15</h3>
+                        <p>
+                            Po podaniu dwóch liczb całkowitych k, n z przedziału <1;20> wyświetlanie w kolejnych k wierszach liczb w następujący sposób:
+                            1 2 3 ... n-1 n<br>1 2 3 ... n-1<br>...<br>1 2<br>1
+                        </p>
+                        <input type="number" id="zad15_k" placeholder="Podaj k" class="form-control mb-1" min="1" max="20">
+                        <input type="number" id="zad15_n" placeholder="Podaj n" class="form-control mb-1" min="1" max="20">
+                        <button class="btn btn-primary mt-2" onclick="f15_DK()">Pokaż wyniki</button>
+                        <button id="toggleKod15" class="btn btn-secondary mt-2" onclick="pokazKod(15)">Pokaż kod</button>
+                        <pre id="kod15" style="display:none;"></pre>
+                        <div id="zad15_wynik" class="mt-3"></div>
                     </section>
                 </div>
             </main>

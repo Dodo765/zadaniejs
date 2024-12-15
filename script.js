@@ -1,8 +1,8 @@
 // Zadanie 1
 // Sprawdzanie czy wartość x wprowadzona do pola tekstowego jest liczbą. Jeżeli tak, to czy jest to liczba dodatnia, zero czy liczba ujemna
 function f1_DK() {
-    const x = parseInt(document.getElementById("zad1_x").value);
-    const wynik = document.getElementById("zad1_wynik");
+    let x = document.getElementById("zad1_x").value;
+    let wynik = document.getElementById("zad1_wynik");
 
     if (isNaN(x)) {
         wynik.textContent = "To nie jest liczba!";
@@ -18,8 +18,8 @@ function f1_DK() {
 // Zadanie 2
 // Wyświetlanie kolejnych liczb całkowitych z przedziału [a,b]. Wykonaj zadanie za pomocą pętli for, while, do..while.
 function f2_for_DK() {
-    let a = parseInt(document.getElementById("zad2_for_a").value);
-    let b = parseInt(document.getElementById("zad2_for_b").value);
+    let a = document.getElementById("zad2_for_a").value;
+    let b = document.getElementById("zad2_for_b").value;
     let wynik = document.getElementById("zad2_for_wynik");
 
     wynik.innerHTML = "";
@@ -42,8 +42,8 @@ function f2_for_DK() {
 }
 
 function f2_while_DK() {
-    let a = parseInt(document.getElementById("zad2_while_a").value);
-    let b = parseInt(document.getElementById("zad2_while_b").value);
+    let a = document.getElementById("zad2_while_a").value;
+    let b = document.getElementById("zad2_while_b").value;
     let wynik = document.getElementById("zad2_while_wynik");
 
     wynik.innerHTML = "";
@@ -68,8 +68,8 @@ function f2_while_DK() {
 }
 
 function f2_dowhile_DK() {
-    let a = parseInt(document.getElementById("zad2_dowhile_a").value);
-    let b = parseInt(document.getElementById("zad2_dowhile_b").value);
+    let a = document.getElementById("zad2_dowhile_a").value;
+    let b = document.getElementById("zad2_dowhile_b").value;
     let wynik = document.getElementById("zad2_dowhile_wynik");
 
     wynik.innerHTML = "";
@@ -99,7 +99,7 @@ function f3_DK() {
     let a = document.getElementById("zad3_a").value;
     let b = document.getElementById("zad3_b").value;
     let n = document.getElementById("zad3_n").value;
-    const wynik = document.getElementById("zad3_wynik");
+    let wynik = document.getElementById("zad3_wynik");
 
     wynik.innerHTML = "";
 
@@ -124,8 +124,8 @@ function f3_DK() {
 // Zadanie 4
 // Wyświetlanie ilości i sumy cyfr liczby całkowitej n wprowadzonej do pola tekstowego
 function f4_DK() {
-    const n = document.getElementById("zad4_n").value;
-    const wynik = document.getElementById("zad4_wynik");
+    let n = document.getElementById("zad4_n").value;
+    let wynik = document.getElementById("zad4_wynik");
 
     wynik.innerHTML = "";
 
@@ -147,8 +147,8 @@ function f4_DK() {
 // Zadanie 5
 // Obliczanie silni liczby całkowitej n
 function f5_DK() {
-    const n = document.getElementById("zad5_n").value;
-    const wynik = document.getElementById("zad5_wynik");
+    let n = document.getElementById("zad5_n").value;
+    let wynik = document.getElementById("zad5_wynik");
 
     wynik.innerHTML = "";
 
@@ -169,9 +169,9 @@ function f5_DK() {
 // Zadanie 6
 // Wyświetlanie n-kolejnych potęg naturalnych liczby całkowitej p
 function f6_DK() {
-    const p = document.getElementById("zad6_p").value;
-    const n = document.getElementById("zad6_n").value;
-    const wynik = document.getElementById("zad6_wynik");
+    let p = document.getElementById("zad6_p").value;
+    let n = document.getElementById("zad6_n").value;
+    let wynik = document.getElementById("zad6_wynik");
 
     wynik.innerHTML = "";
 
@@ -191,9 +191,9 @@ function f6_DK() {
 // Zadanie 7
 // Dodawanie, odejmowanie, mnożenie, dzielenie, potęgowanie liczb rzeczywistych
 function f7_DK() {
-    const a = parseFloat(document.getElementById("zad7_a").value);
-    const b = parseFloat(document.getElementById("zad7_b").value);
-    // const d = document.getElementById("zad7_dzialanie").value;
+    let a = parseFloat(document.getElementById("zad7_a").value);
+    let b = parseFloat(document.getElementById("zad7_b").value);
+    // let d = document.getElementById("zad7_dzialanie").value;
     let wynik = document.getElementById("zad7_wynik");
 
     wynik.innerHTML = "";
@@ -209,7 +209,7 @@ function f7_DK() {
     let resultDiv = a !== 0 ? a / b : "Błąd: dzielenie przez zero!";
     let resultPow = Math.pow(a, b);
 
-    wynik.innerHTML += `<strong>Wyniki:</strong><br>`;
+    wynik.innerHTML += `Wyniki:<br>`;
     wynik.innerHTML += `Dodawanie: ${resultAdd}<br>`;
     wynik.innerHTML += `Odejmowanie: ${resultSub}<br>`;
     wynik.innerHTML += `Mnożenie: ${resultMul}<br>`;
@@ -222,8 +222,8 @@ function f7_DK() {
 // Konwersja liczb z systemu o podstawie p na system dziesiętny i odwrotnie
 function f8_DK() {
     let a = parseFloat(document.getElementById("zad8_a").value);
-    const s = parseFloat(document.getElementById("zad8_s").value);
-    const d = document.getElementById("zad8_d").value;
+    let s = parseFloat(document.getElementById("zad8_s").value);
+    let d = document.getElementById("zad8_d").value;
     let wynik = document.getElementById("zad8_wynik");
 
     wynik.innerHTML = "";
@@ -238,7 +238,7 @@ function f8_DK() {
     else{
         if (a === 0) return '0';
     
-        const digits = "0123456789ABCDEFGHIJK";  // Obsługuje do podstawy 16
+        let digits = "0123456789ABCDEFGHIJK";  // Obsługuje do podstawy 16
         let result = '';
         
         while (a > 0) {
@@ -256,15 +256,16 @@ function f8_DK() {
 // Losowanie z powtórzeniami i bez powtórzeń n (n>0) liczb całkowitych z przedziału [a,b]
 function f9_DK() {
     let a = parseFloat(document.getElementById("zad9_a").value);
-    const b = parseFloat(document.getElementById("zad9_b").value);
-    const n = parseFloat(document.getElementById("zad9_n").value);
-    const p = document.getElementById("zad9_p").value;
-    let wynik = document.getElementById("zad8_wynik");
+    let b = parseFloat(document.getElementById("zad9_b").value);
+    let n = parseFloat(document.getElementById("zad9_n").value);
+    let powtorzenia = document.getElementById("zad9_p").value;
+    powtorzenia = powtorzenia == "true" ? true : false;
 
+    let wynik = document.getElementById("zad9_wynik");
     wynik.innerHTML = "";
 
-    if (isNaN(a) || isNaN(b)) {
-        wynik.innerHTML += "Proszę wprowadzić poprawne liczby.";
+    if (isNaN(n) || isNaN(a) || isNaN(b) || n <= 0) {
+        wynik.innerHTML += "Wprowadź poprawne liczby (n > 0).";
         return;
     }
 
@@ -274,24 +275,234 @@ function f9_DK() {
         b=temp;
     }
 
-    let array =[];
-    let liczba;
+    let liczby = [];
+    if(n > (b-a) && !powtorzenia)
+        wynik.innerHTML += "<span style='color:red'>Nie można wylosować tylu unikalnych liczb z danego przedziału.</span><br>"
 
     for(let i=1;i<=n;i++){
-        liczba = Math.random()*(b-a)+a;
-        if(p){
-            if(!array.find(liczba))
-                array.push(liczba);
+        let liczba = Math.floor(Math.random()*(b-a)+a);
+        if(!powtorzenia){
+            if(!liczby.find((element) => element == liczba))
+                liczby.push(liczba);
+            else
+                if(liczby.length <= (b-a))
+                    i--;
         } else 
-            array.push(liczba);
+            liczby.push(liczba);
+    }
+
+    for(i = 0; i<liczby.length; i++){
+        wynik.innerHTML += `${liczby[i]}, `;
     }
 }
 
 
+// Zadanie 10
+// Obliczanie wartości średniej i maksymalnej z wylosowanego zbioru z przedziału [a, b]
+function f10_DK() {
+    let n = document.getElementById("zad10_n").value;
+    let a = document.getElementById("zad10_a").value;
+    let b = document.getElementById("zad10_b").value;
+    let wynik = document.getElementById("zad10_wynik");
+
+    wynik.innerHTML = "";
+
+    if (isNaN(n) || isNaN(a) || isNaN(b) || n <= 0) {
+        wynik.innerHTML += "Wprowadź poprawne liczby (n > 0).";
+        return;
+    }
+
+    if(a > b){
+        let temp=a;
+        a=b;
+        b=temp;
+    }
+
+    let liczby = [];
+    for (let i = 0; i < n; i++) {
+        let liczba = Math.floor(Math.random() * (b-a)) + a;
+        liczby.push(liczba);
+    }
+
+    let max = Math.max(...liczby);
+    let suma = 0;
+    for(i=0;i<liczby.length;i++){
+        suma += liczby[i];
+    }
+    let srednia = Math.round((suma/liczby.length)*100)/100;
+
+    wynik.innerHTML += `Wylosowane liczby: ${liczby.join(", ")}<br>`;
+    wynik.innerHTML += `Wartość maksymalna: ${max}<br>`;
+    wynik.innerHTML += `Średnia wartość: ${srednia}`;
+}
+
+// Zadanie 11
+// Wyświetlanie ilości liczb z wylosowanego zbioru, których wartość jest równa liczbie x
+function f11_DK() {
+    let n = document.getElementById("zad11_n").value;
+    let a = document.getElementById("zad11_a").value;
+    let b = document.getElementById("zad11_b").value;
+    let x = document.getElementById("zad11_x").value;
+    let wynik = document.getElementById("zad11_wynik");
+
+    wynik.innerHTML = "";
+
+    if (isNaN(n) || isNaN(a) || isNaN(b) || isNaN(x) || n <= 0) {
+        wynik.innerHTML += "Wprowadź poprawne liczby (n > 0).";
+        return;
+    }
+
+    if(a > b){
+        let temp=a;
+        a=b;
+        b=temp;
+    }
+
+    let liczby = [];
+    for (let i = 0; i < n; i++) {
+        let liczba = Math.floor(Math.random() * (b-a)) + a;
+        liczby.push(liczba);
+    }
+
+    let iloscLiczb = 0;
+    for(i=0;i<liczby.length;i++){
+        if(liczby[i] == x)
+            iloscLiczb++;
+    }
+
+    wynik.innerHTML += `Wylosowane liczby: ${liczby.join(", ")}<br>`;
+    wynik.innerHTML += `Liczba x (${x}) występuje: ${iloscLiczb} razy.`;
+}
+
+// Zadanie 12
+// Porządkowanie rosnąco i malejąco wylosowanych liczb z przedziału [a,b]
+function f12_DK() {
+    let n = document.getElementById("zad12_n").value;
+    let a = document.getElementById("zad12_a").value;
+    let b = document.getElementById("zad12_b").value;
+    let wynik = document.getElementById("zad12_wynik");
+
+    wynik.innerHTML = "";
+
+    if (isNaN(n) || isNaN(a) || isNaN(b) || n <= 0) {
+        wynik.innerHTML += "Wprowadź poprawne liczby (n > 0).";
+        return;
+    }
+
+    if(a > b){
+        let temp=a;
+        a=b;
+        b=temp;
+    }
+
+    let liczby = [];
+    for (let i = 0; i < n; i++) {
+        let liczba = Math.floor(Math.random() * (b-a)) + a;
+        liczby.push(liczba);
+    }
+
+    let rosnaca = [...liczby].sort((a, b) => a - b);
+    let malejaco = [...liczby].sort((a, b) => b - a);
+
+    //[...liczby] tworzy tabelę elementów ([...liczby]=>[1,6,23,8,-2])
+
+    //sort((a, b) => a - b) bierze parę liczb n i n+1 i sprawdza czy różnica jest większa czy mniejsza niż 0
+    //jeżeli jest mniejsza to zamienia miejscami elementy
+
+    wynik.innerHTML += `Wylosowane liczby: ${liczby.join(", ")}<br>`;
+    wynik.innerHTML += `Posortowane rosnąco: ${rosnaca.join(", ")}<br>`;
+    wynik.innerHTML += `Posortowane malejąco: ${malejaco.join(", ")}<br>`;
+}
+
+// Zadanie 13
+// Po wczytaniu dwóch liczb całkowitych – a, b, skrypt pyta o ich iloczyn do momentu, aż zostanie podany prawidłowy wynik.
+// Następnie wyświetlany jest prawidłowy wynik oraz ilość prób podawania wyniku.
+function f13_DK() {
+    const a = document.getElementById("zad13_a").value;
+    const b = document.getElementById("zad13_b").value;
+    const wynikDiv = document.getElementById("zad13_wynik");
+
+    wynikDiv.innerHTML = "";
+
+    if (isNaN(a) || isNaN(b)) {
+        wynikDiv.innerHTML = "Wprowadź poprawne liczby całkowite dla a i b.";
+        return;
+    }
+
+    const iloczyn = a * b;
+    let liczbaProb = 0;
+    let podanyWynik;
+
+    do {
+        podanyWynik = parseInt(prompt(`Podaj iloczyn liczb ${a} i ${b}:`));
+        liczbaProb++;
+        if (isNaN(podanyWynik)) {
+            alert("To nie jest liczba! Spróbuj ponownie.");
+        } else if (podanyWynik !== iloczyn) {
+            alert("Nieprawidłowy wynik. Spróbuj ponownie.");
+        }
+    } while (podanyWynik !== iloczyn);
+
+    wynikDiv.innerHTML = `Prawidłowy wynik: ${iloczyn}<br>Ilość prób: ${liczbaProb}`;
+}
+
+// Zadanie 14
+// Program prosi użytkownika o podanie liczby z przedziału od 1 do 100 do momentu aż liczba będzie równa wartości wylosowanej
+// z zakresu od 1 do 100. Jeżeli użytkownik poda wartość różną od wylosowanej program powinien informować, czy jest to wartość większa,
+// czy mniejsza od wartości wylosowanej. Po zakończeniu powinna być wyświetlona ilość wykonanych prób.
+function f14_DK() {
+    const wynikDiv = document.getElementById("zad14_wynik");
+    wynikDiv.innerHTML = "";
+    
+    const wylosowanaLiczba = Math.floor(Math.random() * 99) + 1;
+    let liczbaProb = 0;
+    let podanaLiczba;
+
+    do {
+        podanaLiczba = parseInt(prompt("Podaj liczbę z przedziału 1-100:"));
+        liczbaProb++;
+        
+        if (isNaN(podanaLiczba) || podanaLiczba < 1 || podanaLiczba > 100) {
+            alert("Wprowadź liczbę z przedziału 1-100!");
+        } else if (podanaLiczba < wylosowanaLiczba) {
+            alert("Podana liczba jest za mała!");
+        } else if (podanaLiczba > wylosowanaLiczba) {
+            alert("Podana liczba jest za duża!");
+        }
+    } while (podanaLiczba !== wylosowanaLiczba);
+
+    wynikDiv.innerHTML = `Prawidłowa liczba: ${wylosowanaLiczba}<br>Ilość prób: ${liczbaProb}`;
+}
+
+// Zadanie 15
+// Wyświetlanie liczb w kolejnych wierszach w zależności od wartości k i n
+function f15_DK() {
+    const k = document.getElementById("zad15_k").value;
+    const n = document.getElementById("zad15_n").value;
+    const wynikDiv = document.getElementById("zad15_wynik");
+
+    wynikDiv.innerHTML = "";
+
+    if (isNaN(k) || isNaN(n) || k < 1 || k > 20 || n < 1 || n > 20) {
+        wynikDiv.innerHTML = "Wprowadź liczby z przedziału 1-20!";
+        return;
+    }
+
+    for (let i = 0; i < k; i++) {
+        let wiersz = "";
+        for (let j = 1; j <= n - i; j++) {
+            wiersz += j + " ";
+        }
+        wynikDiv.innerHTML += `<p>${wiersz.trim()}</p>`;
+    }
+}
+
+
+
 // Pokaż kod
 function pokazKod(nr) {
-    const kodBlok = document.getElementById(`kod${nr}`);
-    const toggleButton = document.getElementById(`toggleKod${nr}`);
+    let kodBlok = document.getElementById(`kod${nr}`);
+    let toggleButton = document.getElementById(`toggleKod${nr}`);
     
     kodBlok.style.display = kodBlok.style.display === "none" ? "block" : "none";
     toggleButton.textContent = kodBlok.style.display === "none" ? "Pokaż kod" : "Ukryj kod";
